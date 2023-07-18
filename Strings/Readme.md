@@ -111,3 +111,33 @@
                 result=string.ascii_uppercase
                 print(result)
                 o/p: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+# String Formatting
+             In python strings can be formatted in such a way we need the output
+             syntax: f'#statements' or f"statements"
+
+             But why formatting,
+             a=10
+             b=20
+             in order to print 10 is greater than 20 we use 
+             -> print(str(a)+"is greater than"+str(b))
+             this can be eliminated using formatting
+             -> print(f"{a} is greater than {b}")
+
+             example1:
+
+             print decimal value with 2 positions after decimal point
+
+             val=100/5
+             print(f"{val:.2f}")
+
+             example 2:
+             To print binary,decimal,hexadecimal,octal values of a number
+
+             num=20
+             print(f"{num:b} {num:o} {num:X} {numm}")
+
+             if width to be added
+             i=20
+             print(f"{i:{width}} {i:{width}o} {i:{width}X} {i:{width}b}")
+             
