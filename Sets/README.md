@@ -74,7 +74,7 @@
         {'a', 1, 'c', 'b', 4, 5, 7, 8, 2, 12, (5, 4), 11, 3}
 
 
-# COMMON SET OPERATIONS Using union(), intersection() and difference() functions.
+# COMMON SET OPERATIONS Using union(), intersection() ,difference() and symmetric_difference() functions.
 
         a = {2, 4, 5, 9}
         b = {2, 4, 11, 12}
@@ -84,6 +84,8 @@
         {2, 4}
         a.difference(b) # Values which exist in a but not in b
         {9, 5}
+        a.symmetric_difference(b) # Values which exist in a and b but not in both
+        {5,9,11,12}
 
          The union() and intersection() functions are symmetric methods:
 
