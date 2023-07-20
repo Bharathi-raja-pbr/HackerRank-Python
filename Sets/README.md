@@ -65,10 +65,11 @@
 
         Both the discard() and remove() functions take a single value as an argument and removes that value from the set.
         If that value is not present, discard() does nothing, but remove() will raise a KeyError exception.
-        
+# discard() 
         myset.discard(10)
         myset
         {'a', 1, 'c', 'b', 4, 5, 7, 8, 2, 12, (5, 4), 13, 11, 3}
+# remove()
         myset.remove(13)
         myset
         {'a', 1, 'c', 'b', 4, 5, 7, 8, 2, 12, (5, 4), 11, 3}
@@ -78,13 +79,13 @@
 
         a = {2, 4, 5, 9}
         b = {2, 4, 11, 12}
-        a.union(b) # Values which exist in a or b
+# a.union(b) # Values which exist in a or b
         {2, 4, 5, 9, 11, 12}
-        a.intersection(b) # Values which exist in a and b
+# a.intersection(b) # Values which exist in a and b
         {2, 4}
-        a.difference(b) # Values which exist in a but not in b
+# a.difference(b) # Values which exist in a but not in b
         {9, 5}
-        a.symmetric_difference(b) # Values which exist in a and b but not in both
+# a.symmetric_difference(b) # Values which exist in a and b but not in both
         {5,9,11,12}
 
          The union() and intersection() functions are symmetric methods:
