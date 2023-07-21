@@ -21,7 +21,16 @@
                  math.ceil(x)  - returns the smallest integer >= x.
                  math.floor(x) - returns the largest integer <= x
 
-              
+# Divmod:
+                
+                 One of the built-in functions of Python is divmod, which takes two arguments a and  b 
+                 and returns a tuple containing the quotient of a/b first and then the remainder . No need to use math module
+
+                 For example:
+
+                  print divmod(177,10)
+                  (17, 7)
+                  Here, the integer division is 177/10 => 17 and the modulo operator is 177%10 => 7.
                  
 # Trignometry Math functions:
 
