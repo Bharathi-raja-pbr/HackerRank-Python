@@ -78,8 +78,9 @@
 # cmath — Mathematical functions for complex numbers
           This module is always available. It provides access to mathematical functions for complex numbers. 
       The functions in this module accept integers, floating-point numbers or complex numbers as arguments.
-      They will also accept any Python object that has either a __complex__() or a __float__() method: these methods are used to convert the object to a complex
-      or floating-point number, respectively, and the function is then applied to the result of the conversion.
+      They will also accept any Python object that has either a __complex__() or a __float__() method:
+      these methods are used to convert the object to a complex or floating-point number, respectively, 
+      and the function is then applied to the result of the conversion.
 
 
 # cmath functions:
@@ -95,7 +96,8 @@
 # polar()
         cmath.polar(x) - returns the pair (r,phase) i.e, complex number in form of polar coordinates
 # rect()
-        cmath.rect(r,phi) - Return the complex number x with polar coordinates r and phi. Equivalent to r * (math.cos(phi) + math.sin(phi)*1j).
+        cmath.rect(r,phi) - Return the complex number x with polar coordinates r and phi.
+        Equivalent to r * (math.cos(phi) + math.sin(phi)*1j).
 
 # abs()
          This tool returns the modulus (absolute value) of complex number .
