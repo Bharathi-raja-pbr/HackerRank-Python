@@ -14,6 +14,10 @@
                 pow(base,exponent)
                 pow(10,2)--> 100
 
+                pow(base,exponent,mod) -> computes a^b mod m ,if m present b cannot be negative
+
+                pow(3,4,5) -> 1
+
                 math.sqrt(100) --> 10
 
 # Ceil and Floor:
@@ -31,6 +35,7 @@
                   print divmod(177,10)
                   (17, 7)
                   Here, the integer division is 177/10 => 17 and the modulo operator is 177%10 => 7.
+
                  
 # Trignometry Math functions:
 
