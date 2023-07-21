@@ -1,14 +1,66 @@
 # Math 
 
+# Math module
+           Math has many built-in modules for trignometry,rounding off and other math operations.
+            to import math module 
+            import math
 
-# complex numbers
+            to import all functions
+            from math import *
+# Math module functions:
+
+# Power and Sqrt of a number:
+
+                pow(base,exponent)
+                pow(10,2)--> 100
+
+                math.sqrt(100) --> 10
+
+# Ceil and Floor:
+
+                 math.ceil(x)  - returns the smallest integer >= x.
+                 math.floor(x) - returns the largest integer <= x
+
+              
+                 
+# Trignometry Math functions:
+
+# Normal functions: returns ans in radians
+                ->math.cos()
+                ->math.sin()
+                ->math.tan()
+
+# Inverse functions :
+
+                ->math.acos()
+                ->math.asin()
+                ->math.atan()
+
+# Hyperbolic functions: eg sinh(),cosh()
+
+                ->math.sinh()
+                ->math.cosh()
+                ->math.tanh()
+
+# Inverse Hyperbolic functions: 
+
+                ->math.asinh()
+                ->math.acosh()
+                ->math.atanh()
+
+# Degrees and radians
+
+           math.degrees(x)-> Convert angle x from radians to degrees
+           math.radians(x) ->Convert angle x from degrees to radians 
+
+# Complex numbers
 
     These are numbers of form a+ib
     a-> real part
     b-> imaginary part
     i-> imaginary unit
 
-# complex numbers as input
+# Complex numbers as input
 
       n=complex(input())
       print(n)
@@ -31,6 +83,8 @@
 
 
 # cmath functions:
+
+# phase()
        cmath.phase(x)-returns the phase of complex number x
 
        cmath.phase(complex(-1.0, 0.0))
@@ -38,9 +92,9 @@
 
        Phase angle:
                   Counter clockwise angle measured from the positive x-axis to the line segment that joins x to the origin
-
+# polar()
         cmath.polar(x) - returns the pair (r,phase) i.e, complex number in form of polar coordinates
-
+# rect()
         cmath.rect(r,phi) - Return the complex number x with polar coordinates r and phi. Equivalent to r * (math.cos(phi) + math.sin(phi)*1j).
 
 # abs()
@@ -48,5 +102,3 @@
 
             abs(complex(-1.0, 0.0))
             1.0
-
-        
