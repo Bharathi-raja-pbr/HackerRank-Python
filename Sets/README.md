@@ -74,6 +74,16 @@
         myset
         {'a', 1, 'c', 'b', 4, 5, 7, 8, 2, 12, (5, 4), 11, 3}
 
+# pop()
+       removes the lastelement by default.
+       It removes and returns the argument
+
+       a={1,2,3}
+       b=a.pop()
+       print(b)
+
+       o/p:
+       3
 
 # COMMON SET OPERATIONS Using union(), intersection() ,difference() and symmetric_difference() functions.
 
