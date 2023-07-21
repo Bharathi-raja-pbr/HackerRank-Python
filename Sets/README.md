@@ -143,3 +143,9 @@
          H.symmetric_difference_update(R)
          print H
         set(['c', 'e', 'H', 'n', 'r', 'R'])
+# issuperset():
+        Returns true if A is a superset of B,else false
+# issubset():
+        Returns true if A is a subset of B,else false
+# isdisjoint():
+        Returns true if A is a disjoint set of B,else false
