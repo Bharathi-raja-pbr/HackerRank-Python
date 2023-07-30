@@ -23,9 +23,9 @@
 # calendar.leapdays(y1, y2)
     Returns the number of leap years in the range from y1 to y2 (exclusive), where y1 and y2 are years.
 
-   calendar.leapdays(2000,2024)
-   ->6
-   2000,2004,2008,2012,2016,2020
+         calendar.leapdays(2000,2024)
+         ->6
+         2000,2004,2008,2012,2016,2020
 
 # calendar.weekday(year, month, day)
     Returns the day of the week (0 is Monday) for year (1970–…), month (1–12), day (1–31).
@@ -39,4 +39,6 @@
     Returns weekday of first day of the month and number of days in month, for the specified year and month.
 
 # calendar.monthcalendar(year, month)
-    Returns a matrix representing a month’s calendar. Each row represents a week; days outside of the month a represented by zeros. Each week begins with Monday unless set by setfirstweekday().
+          Returns a matrix representing a month’s calendar.
+          Each row represents a week; days outside of the month a represented by zeros.
+          Each week begins with Monday unless set by setfirstweekday().
