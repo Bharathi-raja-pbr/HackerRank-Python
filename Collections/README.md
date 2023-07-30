@@ -25,4 +25,38 @@
     print Counter(myList).values()
     [3, 4, 4, 2, 1]
 
-    
+  # collections.defaultdict()
+
+              The defaultdict tool is a container in the collections class of Python. It's similar to the usual dictionary (dict) container, but the only 
+            difference is that a defaultdict will have a default value if that key has not been set yet.If you didn't use a defaultdict you'd have to 
+            check to see if that key exists, and if it doesn't, set it to what you want.
+            
+            For example:
+            
+            from collections import defaultdict
+            d = defaultdict(list)
+            d['python'].append("awesome")
+            d['something-else'].append("not relevant")
+            d['python'].append("language")
+            for i in d.items():
+                print i
+            
+            This prints:
+            
+            ('python', ['awesome', 'language'])
+            ('something-else', ['not relevant'])
+
+            Example 2:
+            
+            from collections import defaultdict
+            def def_value():
+                return "Not Present"
+                  
+            # Defining the dict
+            d = defaultdict(def_value)
+            d["a"] = 1
+            d["b"] = 2
+              
+            print(d["a"])
+            print(d["b"])
+            print(d["c"])
