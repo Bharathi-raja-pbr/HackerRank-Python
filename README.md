@@ -241,6 +241,427 @@ This repository contains the solutions for the python preparation questions in H
       [(1, 1), (1, 3), (1, 3), (1, 3), (1, 3), (1, 3), (1, 3), (3, 3), (3, 3), (3, 3)]
 
 
+# Math 
+
+# Math module
+           Math has many built-in modules for trignometry,rounding off and other math operations.
+            to import math module 
+            import math
+
+            to import all functions
+            from math import *
+# Math module functions:
+
+# Power and Sqrt of a number:
+
+                pow(base,exponent)
+                pow(10,2)--> 100
+
+                pow(base,exponent,mod) -> computes a^b mod m ,if m present b cannot be negative
+
+                pow(3,4,5) -> 1
+
+                math.sqrt(100) --> 10
+
+# Ceil and Floor:
+
+                 math.ceil(x)  - returns the smallest integer >= x.
+                 math.floor(x) - returns the largest integer <= x
+
+# Divmod:
+                
+                 One of the built-in functions of Python is divmod, which takes two arguments a and  b 
+                 and returns a tuple containing the quotient of a/b first and then the remainder . No need to use math module
+
+                 For example:
+
+                  print divmod(177,10)
+                  (17, 7)
+                  Here, the integer division is 177/10 => 17 and the modulo operator is 177%10 => 7.
+
+                 
+# Trignometry Math functions:
+
+# Normal functions: returns ans in radians
+                ->math.cos()
+                ->math.sin()
+                ->math.tan()
+
+# Inverse functions :
+
+                ->math.acos()
+                ->math.asin()
+                ->math.atan()
+
+# Hyperbolic functions: eg sinh(),cosh()
+
+                ->math.sinh()
+                ->math.cosh()
+                ->math.tanh()
+
+# Inverse Hyperbolic functions: 
+
+                ->math.asinh()
+                ->math.acosh()
+                ->math.atanh()
+
+# Degrees and radians
+
+           math.degrees(x)-> Convert angle x from radians to degrees
+           math.radians(x) ->Convert angle x from degrees to radians 
+
+# Complex numbers
+
+    These are numbers of form a+ib
+    a-> real part
+    b-> imaginary part
+    i-> imaginary unit
+
+# Complex numbers as input
+
+      n=complex(input())
+      print(n)
+
+      o/p: (3+2i)
+
+# Polar coordinates
+       A polar coordinate (r,phi)  is completely determined by modulus of x and phase angle .
+      
+      If we convert complex number x to its polar coordinate, we find:
+      r : Distance from x to origin, i.e., sqrt(x^2+y^2)
+      phi : Counter clockwise angle measured from the positive x-axis to the line segment that joins x to the origin.
+
+ 
+# cmath — Mathematical functions for complex numbers
+          This module is always available. It provides access to mathematical functions for complex numbers. 
+      The functions in this module accept integers, floating-point numbers or complex numbers as arguments.
+      They will also accept any Python object that has either a __complex__() or a __float__() method:
+      these methods are used to convert the object to a complex or floating-point number, respectively, 
+      and the function is then applied to the result of the conversion.
+
+
+# cmath functions:
+
+# phase()
+       cmath.phase(x)-returns the phase of complex number x
+
+       cmath.phase(complex(-1.0, 0.0))
+       3.1415926535897931
+
+       Phase angle:
+                  Counter clockwise angle measured from the positive x-axis to the line segment that joins x to the origin
+# polar()
+        cmath.polar(x) - returns the pair (r,phase) i.e, complex number in form of polar coordinates
+# rect()
+        cmath.rect(r,phi) - Return the complex number x with polar coordinates r and phi.
+        Equivalent to r * (math.cos(phi) + math.sin(phi)*1j).
+
+# abs()
+         This tool returns the modulus (absolute value) of complex number .
+
+            abs(complex(-1.0, 0.0))
+            1.0
+
+# Link for Reference
+           https://docs.python.org/2/library/cmath.html
+
+# SETS
+
+# Introduction
+  A set is an unordered collection of elements without duplicate entries.
+  When printed, iterated or converted into a sequence, its elements will appear in an arbitrary order.
+  Basically, sets are used for membership testing and eliminating duplicate entries.
+
+        print set()
+        set([])
+        
+        print set('HackerRank')
+        set(['a', 'c', 'e', 'H', 'k', 'n', 'r', 'R'])
+        
+        print set([1,2,1,2,3,4,5,6,0,9,12,22,3])
+        set([0, 1, 2, 3, 4, 5, 6, 9, 12, 22])
+        
+        print set((1,2,3,4,5,5))
+        set([1, 2, 3, 4, 5])
+        
+        print set(set(['H','a','c','k','e','r','r','a','n','k']))
+        set(['a', 'c', 'r', 'e', 'H', 'k', 'n'])
+        
+        print set({'Hacker' : 'DOSHI', 'Rank' : 616 })
+        set(['Hacker', 'Rank'])
+        
+        print set(enumerate(['H','a','c','k','e','r','r','a','n','k']))
+        set([(6, 'r'), (7, 'a'), (3, 'k'), (4, 'e'), (5, 'r'), (9, 'k'), (2, 'c'), (0, 'H'), (1, 'a'), (8, 'n')])
+
+        Sets are an unordered collection of unique values. A single set contains values of any immutable data type.
+
+# CREATING SETS
+
+        myset = {1, 2} # Directly assigning values to a set
+        myset = set()  # Initializing a set
+        myset = set(['a', 'b']) # Creating a set from a list
+        myset
+        {'a', 'b'}
+
+
+# MODIFYING SETS
+
+  # Using the add() function:
+        
+        myset.add('c')
+        myset
+        {'a', 'c', 'b'}
+        myset.add('a') # As 'a' already exists in the set, nothing happens
+        myset.add((5, 4))
+        myset
+        {'a', 'c', 'b', (5, 4)}
+
+  # Using the update() function:
+        
+        myset.update([1, 2, 3, 4]) # update() only works for iterable objects
+        myset
+        {'a', 1, 'c', 'b', 4, 2, (5, 4), 3}
+        myset.update({1, 7, 8})
+        myset
+        {'a', 1, 'c', 'b', 4, 7, 8, 2, (5, 4), 3}
+        myset.update({1, 6}, [5, 13])
+        myset
+        {'a', 1, 'c', 'b', 4, 5, 6, 7, 8, 2, (5, 4), 13, 3}
+
+# REMOVING ITEMS
+
+        Both the discard() and remove() functions take a single value as an argument and removes that value from the set.
+        If that value is not present, discard() does nothing, but remove() will raise a KeyError exception.
+# discard() 
+        myset.discard(10)
+        myset
+        {'a', 1, 'c', 'b', 4, 5, 7, 8, 2, 12, (5, 4), 13, 11, 3}
+# remove()
+        myset.remove(13)
+        myset
+        {'a', 1, 'c', 'b', 4, 5, 7, 8, 2, 12, (5, 4), 11, 3}
+
+# pop()
+       removes the lastelement by default.
+       It removes and returns the argument
+
+       a={1,2,3}
+       b=a.pop()
+       print(b)
+
+       o/p:
+       3
+
+# COMMON SET OPERATIONS Using union(), intersection() ,difference() and symmetric_difference() functions.
+
+        a = {2, 4, 5, 9}
+        b = {2, 4, 11, 12}
+# a.union(b) # Values which exist in a or b
+        {2, 4, 5, 9, 11, 12}
+# a.intersection(b) # Values which exist in a and b
+        {2, 4}
+# a.difference(b) # Values which exist in a but not in b
+        {9, 5}
+# a.symmetric_difference(b) # Values which exist in a and b but not in both
+        {5,9,11,12}
+
+         The union() and intersection() functions are symmetric methods:
+
+        a.union(b) == b.union(a)
+        True
+        a.intersection(b) == b.intersection(a)
+        True
+        a.difference(b) == b.difference(a)
+        False
+  # Mutations
+
+  # .update() or |=
+        Update the set by adding elements from an iterable/another set.
+        
+         H = set("Hacker")
+         R = set("Rank")
+         H.update(R)
+         print H
+        set(['a', 'c', 'e', 'H', 'k', 'n', 'r', 'R'])
+        
+  # .intersection_update() or &=
+        Update the set by keeping only the elements found in it and an iterable/another set.
+        
+         H = set("Hacker")
+         R = set("Rank")
+         H.intersection_update(R)
+         print H
+        set(['a', 'k'])
+        
+  # .difference_update() or -=
+        Update the set by removing elements found in an iterable/another set.
+        
+         H = set("Hacker")
+         R = set("Rank")
+         H.difference_update(R)
+         print H
+        set(['c', 'e', 'H', 'r'])
+        
+  # .symmetric_difference_update() or ^=
+        Update the set by only keeping the elements found in either set, but not in both.
+        
+         H = set("Hacker")
+         R = set("Rank")
+         H.symmetric_difference_update(R)
+         print H
+        set(['c', 'e', 'H', 'n', 'r', 'R'])
+# issuperset():
+        Returns true if A is a superset of B,else false
+# issubset():
+        Returns true if A is a subset of B,else false
+# isdisjoint():
+        Returns true if A is a disjoint set of B,else false
+
+
+# Python Strings
+
+# Definition:
+    Strings are words surrounded by quotes.Strings can be traversed.Strings can be sliced.
+    
+# Declaration:
+     -> s=''
+     -> s=""
+
+# Get as i/p from user:
+    str=input()
+
+# Traversal:
+
+    for x in str:
+        print(str)
+
+# Indexing:
+
+     str='apple'
+     str[0]='a'
+     str[-1]='e'
+
+# Slicing:
+     str[start:stop:step]
+     str[0:] -> prints entire string
+     str[:5] -> prints string starting from index 0 to 4
+     str[1:5] -> prints string from index 1 to 4
+
+
+# String Reverse:
+      str[::-1] -> reverses the entire string
+
+# Split and Join:
+      split:
+           It splits the string based on the delimiter
+
+            str='this is github'
+            a=str.split(' ') #splits removing spaces instead of space any delimiter can be provided
+            o/p: ['this','is','github']
+      join:
+           It joins array of strings
+           a=['this','is','github']
+           str='-'.join(a)
+           o/p: this-is-github
+           
+# Built-in string functions:
+
+      isalnum()-checks whether the string is alphanumerical or not.
+      isalpha()-checks whether the string contains only alphabets.
+      isdigit()-checks whether the string contains only numbers.
+      islower()-checks whether the string contains only lowercase letters.
+      isupper()-checks whether the string contains only uppercase letters.
+      toupper()-converts the entire string to uppercase.
+      tolower()-converts the entire string to lowercase.
+      casefold()-converts every uppercase to lowercase.
+      capitalize()-converts the first letter to uppercase.
+      count(sub,start,stop)-counts the occurence of subtring in string. 
+      Swapcase()-alters the cases of the string.
+      title()-converts the first letter of each word in string to uppercase.
+    
+      other functions: isnumeric(),isacii().
+
+  #   Alignment:
+        s='apple'
+        ljust():
+            left aligns the string
+            ->s.ljust(2)
+                apple**
+        rjust():
+             right aligns the string
+             ->s.rjust()
+                 **apple
+        center():
+              aligns string to center
+              ->s.center()
+                *apple*
+ # Textwrap:
+         Textwrap is a module ,which needs to be imported in order to access its function.
+
+         import textwrap
+
+         function:
+          ->fill()-it creates a rectangular box
+               fill(string,maxwidth):
+               s='ABCDEFGH'
+               textwrap.fill(s,3)
+               o/p: 
+               ABC
+               DEF
+               GH
+          
+          ->wrap() - it traverses the string in such way that its splitted and stored in single line
+                wrap(string,width)
+                s='ABCDEFGH'
+                textwrap.wrap(s,3)
+                o/p:
+                ['ABC','DEF','GH']
+
+ # String module:
+           String module has few useful functions
+
+           import string
+
+               ascii_lowercase: contains all lowercase letters in a string
+                result=string.ascii_lowercase
+                print(result)
+                o/p: abcdefghijklmnopqrstuvxyz
+
+               ascii_uppercase: contains all uppercase letters in a string
+                result=string.ascii_uppercase
+                print(result)
+                o/p: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+# String Formatting
+             In python strings can be formatted in such a way we need the output
+             syntax: f'#statements' or f"statements"
+
+             But why formatting,
+             a=10
+             b=20
+             in order to print 10 is greater than 20 we use 
+             -> print(str(a)+"is greater than"+str(b))
+             this can be eliminated using formatting
+             -> print(f"{a} is greater than {b}")
+
+             example1:
+
+             print decimal value with 2 positions after decimal point
+
+             val=100/5
+             print(f"{val:.2f}")
+
+             example 2:
+             To print binary,decimal,hexadecimal,octal values of a number
+
+             num=20
+             print(f"{num:b} {num:o} {num:X} {numm}")
+
+             if width to be added
+             i=20
+             print(f"{i:{width}} {i:{width}o} {i:{width}X} {i:{width}b}")
+             
+
 
 # Exceptions:
 
